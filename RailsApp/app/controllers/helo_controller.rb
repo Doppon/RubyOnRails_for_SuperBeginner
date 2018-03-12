@@ -2,10 +2,10 @@ class HeloController < ApplicationController
 
   def index
     msg = ''
-    if params['name'].nil?
+    if params[:name].nil?
       msg = 'this os sample page.'
     else
-      msg = 'hello, ' + params['name'] + '!'
+      msg = 'hello, ' + params[:name] + '!'
     end
     msg = '
     <html>
