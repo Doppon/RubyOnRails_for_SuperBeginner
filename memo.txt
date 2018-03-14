@@ -36,5 +36,13 @@ render html: msg.html_safe
 ## ERB
 
 Embedded Rubyの略 ← 略称は知らなかった
+そのまま埋め込みRuby
 
+
+## pt単位
+
+ptは1/72インチのサイズ。
+0.352778mmぐらいだそう。
+参考にした記事↓
+https://adworks24.co.jp/archives/740.html
 
