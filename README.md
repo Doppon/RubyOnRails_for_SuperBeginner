@@ -12,6 +12,8 @@ URL：http://www.shuwasystem.co.jp/products/7980html/4832.html
 RailsApp：第一章~〇〇まで(進めてるなう)
 
 Addendum：Rubyの基本的な使い方
+
+memo：気になった事や知らなかった事のメモ
 ```
 
 ### 注意事項
