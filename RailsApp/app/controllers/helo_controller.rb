@@ -3,7 +3,7 @@ class HeloController < ApplicationController
   def index
     if request.post?
       @title = 'Result'
-      if params['check1']
+      if params[:check1]
         @msg = 'チェック済み(`･ ω･´)ゞﾋﾞｼｯ!!'
       else
         @msg = 'チェックできてない(っω<。)ﾌｷﾌｷ'
