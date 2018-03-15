@@ -10,7 +10,7 @@ class HeloController < ApplicationController
   end
 
   def other
-    redirect_to action: :index, params: { query_msg: '待ってこのリダイレクトの書き方初めて(でもないかｗ)' }
+    redirect_to action: :index, params: { query_msg: params[:query_msg] }
   end
 
 end
