@@ -8,9 +8,15 @@ class HeloController < ApplicationController
       else
         @msg = '選択できてない(っω<。)ﾌｷﾌｷ'
       end
+
+      if params['s1']
+        @msg = '選択したのは┃電柱┃゜艸゜)ジー... ' + params['s1']
+      else
+        @msg = '選択できてない(っω<。)ﾌｷﾌｷ'
+      end
     else
       @title = 'Index'
-      @msg = 'ラジオボタンを選択するのじゃ(´・ω・｀)ｗ ...'
+      @msg = '色々選択するのじゃ(´・ω・｀)ｗ ...'
     end
   end
 
