@@ -3,10 +3,14 @@ class HeloController < ApplicationController
   def index
     if request.post?
       @title = 'Result'
-      @msg = 'you typed: ' + params['input1'] + '.'
+      if params['check1']
+        @msg = 'チェック済み(`･ ω･´)ゞﾋﾞｼｯ!!'
+      else
+        @msg = 'チェックできてない(っω<。)ﾌｷﾌｷ'
+      end
     else
-      @title = 'デフォのタイトル(´・ω・｀)'
-      @msg = 'type text ...'
+      @title = 'Index'
+      @msg = 'Check it ...'
     end
   end
 
