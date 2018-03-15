@@ -1,16 +1,15 @@
 class HeloController < ApplicationController
 
   def index
-    if params[:query_msg].nil?
-      @title = "デフォのタイトル(´・ω・｀)"
+    if request.post?
+      @title = 'Result'
+      @msg = 'you typed: ' + params['input1'] + '.'
+      @value = params['input1']
     else
-      @title = params[:query_msg]
+      @title = 'デフォのタイトル(´・ω・｀)'
+      @msg = 'type text ...'
+      @value = ''
     end
-    @msg = "リダイレクトの処理を追加したぜいd(´・ω・｀)"
-  end
-
-  def other
-    redirect_to action: :index, params: { query_msg: params[:query_msg] }
   end
 
 end
