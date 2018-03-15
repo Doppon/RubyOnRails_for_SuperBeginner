@@ -46,3 +46,9 @@ ptは1/72インチのサイズ。
 参考にした記事↓
 https://adworks24.co.jp/archives/740.html
 
+
+## CSRFの解除方法
+※CSRF(Cross Site Request Forgery)の略
+
+普通にコントローラー内に "protect_form_forgery" と書くだけでおｋ
+
