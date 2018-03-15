@@ -2,12 +2,7 @@
 <p><%= @msg %></p>
 
 <%= form_tag(controller: "helo", action: "index") do %>
-<!-- ラジオボタン -->
-<%= radio_button_tag(:r1, "ラジオ1") %>
-<%= label_tag("r1_radio_1", "Radio Button 1") %><br>
-<%= radio_button_tag(:r1, "ラジオ2") %>
-<%= label_tag("r1_radio_2", "Radio Button 2") %><br>
-<!-- 選択リスト -->
-<%= select_tag('s1', options_for_select(["肉まん","あんまん", "ピザまん"])) %>
+<%= select_tag('s1', options_for_select(["肉まん","あんまん", "ピザまん"]),
+  {size:5, multiple:true}) %>
 <%= submit_tag("送信！！") %>
 <% end %>

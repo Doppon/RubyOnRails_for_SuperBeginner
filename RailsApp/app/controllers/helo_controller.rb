@@ -3,14 +3,11 @@ class HeloController < ApplicationController
   def index
     if request.post?
       @title = '結果は|ω・`）ちら'
-      if params[:r1]
-        @msg = '選択したのは┃電柱┃゜艸゜)ジー... ' + params['r1']
-      else
-        @msg = '選択できてない(っω<。)ﾌｷﾌｷ'
-      end
-
       if params['s1']
-        @msg = '選択したのは┃電柱┃゜艸゜)ジー... ' + params['s1']
+        @msg = '選択したのは┃電柱┃゜艸゜)ジー... '
+        for val in params['s1']
+          @msg += val + ' '
+        end
       else
         @msg = '選択できてない(っω<。)ﾌｷﾌｷ'
       end
