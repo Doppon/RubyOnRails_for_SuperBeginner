@@ -1,10 +1,10 @@
 class HeloController < ApplicationController
 
   def index
-    if params['msg'] != nil then
-      @title = params['msg']
-    else
+    if params['msg'].nil?
       @title = "デフォのタイトル(´・ω・｀)"
+    else
+      @title = params['msg']      
     end
     @msg = "リダイレクトの処理を追加したぜいd(´・ω・｀)"
   end
