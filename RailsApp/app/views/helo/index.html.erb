@@ -1,8 +1,1 @@
-<h2><%= @title %></h2>
 <p><%= @msg %></p>
-
-<%= form_tag(controller: "helo", action: "index") do %>
-<%= select_tag('s1', options_for_select(["肉まん","あんまん", "ピザまん"]),
-  {size:5, multiple:true}) %>
-<%= submit_tag("送信！！") %>
-<% end %>
