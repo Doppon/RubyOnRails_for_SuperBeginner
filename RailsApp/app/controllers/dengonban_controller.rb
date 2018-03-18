@@ -2,6 +2,12 @@ class DengonbanController < ApplicationController
   layout 'dengonban'
 
   def initialize
+    super
+    begin
+      @dengon_data = JSON.parse(File.read("data.txt"))
+    rescue
+      @dengon_data = Hash.new
+    end
     @dengon_data.each do |key,obj|
       if Time.now.to_i - key.to_i > 24*60*60
         @dengon_data.delete(key)
@@ -11,6 +17,13 @@ class DengonbanController < ApplicationController
   end
 
   def index
+    if request.post?
+      obj = MyData.new(msg:params['msg'], name:params['name'], mail:params['mail'])
+      @dengon_data[Time.now.to_i] = obj
+      data = @dengon_data.to_json
+      File.write("data.txt", data)
+      @dengon_data = JSON.parse(data)
+    end
   end
 
 end
