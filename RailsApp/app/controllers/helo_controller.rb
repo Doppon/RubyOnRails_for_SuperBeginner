@@ -1,5 +1,4 @@
 class HeloController < ApplicationController
-
   layout 'helo'
 
   def index
