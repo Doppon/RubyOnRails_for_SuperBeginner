@@ -2,11 +2,17 @@ class DengonbanController < ApplicationController
   layout 'dengonban'
 
   def initialize
+    @dengon_data.each do |key,obj|
+      if Time.now.to_i - key.to_i > 24*60*60
+        @dengon_data.delete(key)
+      end
+    end
+    File.write("data.txt", @dengon_data.to_json)
   end
 
   def index
   end
-  
+
 end
 
 class MyData
