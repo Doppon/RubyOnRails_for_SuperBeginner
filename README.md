@@ -13,7 +13,9 @@ URL：http://www.shuwasystem.co.jp/products/7980html/4832.html
 |
 |- Addendum：Rubyの基本的な使い方
 |
- - memo：気になった事や知らなかった事のメモ
+|- memo：気になった事や知らなかった事のメモ
+|
+ - (README：このファイルｗ)
 ```
 
 ### 注意事項
