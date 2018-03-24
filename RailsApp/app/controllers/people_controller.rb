@@ -14,7 +14,7 @@ class PeopleController < ApplicationController
     @msg = '(ΦωΦ)フフフ…addアクションだぜd(´・ω・｀)'
   end
 
-  protect_form_forgery
+  protect_from_forgery
 
   def create
     if request.post? then
