@@ -12,7 +12,7 @@
         <%= obj.id %>
       </td>
       <td>
-        <a href="/people/<%= obj.id %>"><%= obj.name %></a>
+        <%= link_to  "#{obj.name}", "/people/#{obj.id}" %>
       </td>
     </tr>
     <% end %>
