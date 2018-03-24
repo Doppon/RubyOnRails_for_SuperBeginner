@@ -8,8 +8,12 @@
     </tr>
     <% @data.each do |obj| %>
     <tr>
-      <td><%= obj.id %></td>
-      <td><%= obj.name %></td>
+      <td>
+        <%= obj.id %>
+      </td>
+      <td>
+        <a href="/people/<%= obj.id %>"><%= obj.name %></a>
+      </td>
     </tr>
     <% end %>
   </table>
