@@ -14,4 +14,17 @@ class PeopleController < ApplicationController
     @msg = '(ΦωΦ)フフフ…addアクションだぜd(´・ω・｀)'
   end
 
+  protect_form_forgery
+
+  def create
+    if request.post? then
+      obj = Person.create(
+        name: params['name'],
+        age: params['age' ],
+        mail: params['mail']
+      )
+    end
+    redirect_to '/people'
+  end
+
 end
