@@ -5,15 +5,11 @@
     <tr>
       <th>id</th>
       <th>name</th>
-      <th>age</th>
-      <th>mail</th>
     </tr>
-    <%= @data.each do |obj| %>
+    <% @data.each do |obj| %>
     <tr>
       <td><%= obj.id %></td>
-      <td><%= obj.age %></td>
       <td><%= obj.name %></td>
-      <td><%= obj.mail %></td>
     </tr>
     <% end %>
   </table>
