@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'people/index'
   get 'people', to: 'people#index'
 
+  get 'people/add'
+
   get 'people/:id', to: 'people#show'
 
   get 'dengonban/index'
