@@ -18,7 +18,7 @@ class DengonbanController < ApplicationController
 
   def index
     if request.post?
-      obj = MyData.new(msg:params['msg'], name:params['name'], mail:params['mail'])
+      obj = MyData.new(msg:params[:msg], name:params[:name], mail:params[:mail])
       @dengon_data[Time.now.to_i] = obj
       data = @dengon_data.to_json
       File.write("data.txt", data)
