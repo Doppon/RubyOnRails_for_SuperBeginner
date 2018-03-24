@@ -9,13 +9,13 @@
       <th>age</th>
       <th>mail</th>
     </tr>
+    <%= @data.each do |obj| %>    
     <tr>
-      <%= @data.each do |obj| %>
         <td><%= obj.id %></td>
         <td><%= obj.age %></td>
         <td><%= obj.name %></td>
         <td><%= obj.mail %></td>
-      <% end %>    
     </tr>
+    <% end %>    
   </table>
 </pre>
