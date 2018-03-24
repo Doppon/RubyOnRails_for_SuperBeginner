@@ -1,3 +1,26 @@
 // Place all the styles related to the people controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  color: darkgray;
+  font-size: 18pt;
+  margin: 10px 20px;
+}
+
+h1 {
+  color: darkgray;
+  font-size: 24pt;
+  margin: 40px 0px;
+}
+
+table tr th {
+  padding: 10px;
+  font-weight: bold;
+}
+
+table tr th {
+  padding: 5px 10px;
+}
+
+
