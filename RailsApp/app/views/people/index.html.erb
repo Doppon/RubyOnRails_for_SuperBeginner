@@ -1,2 +1,9 @@
 <h1>People#index</h1>
-<p>Find me in app/views/people/index.html.erb</p>
+<p><%= @msg %></p>
+
+<%= @data.each do |d| %>
+  <div style="width: 30px; height: 50px"><%= d.id %></div>
+  <div style="width: 30px; height: 50px"><%= d.age %></div>
+  <div style="width: 30px; height: 50px"><%= d.name %></div>
+  <div style="width: 30px; height: 50px"><%= d.mail %></div>
+<% end %>
