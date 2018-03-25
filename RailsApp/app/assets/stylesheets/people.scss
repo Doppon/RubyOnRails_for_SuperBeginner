@@ -15,12 +15,15 @@ h1 {
 }
 
 table tr th {
+  background: coral;
+  color: #f6f6f6;
   padding: 10px;
   font-weight: bold;
 }
 
-table tr th {
+table tr td {
+  background: burlywood;
+  color: #909090;
   padding: 5px 10px;
+  font-size: 20px;
 }
-
-
