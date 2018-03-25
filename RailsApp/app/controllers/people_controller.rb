@@ -13,13 +13,10 @@ class PeopleController < ApplicationController
   def add
     @msg = '(ΦωΦ)フフフ…addアクションだぜd(´・ω・｀)'
     @person = Person.new
-  end
-
-  def create
     if request.post? then
       Person.create(person_params)
+      redirect_to '/people'
     end
-    redirect_to '/people'
   end
 
   private
