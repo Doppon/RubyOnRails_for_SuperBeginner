@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #CRUD機能が実装されたPeopleルーティング
   get 'people/index'
   get 'people', to: 'people#index'
 
@@ -12,12 +13,14 @@ Rails.application.routes.draw do
 
   get 'people/:id', to: 'people#show'
 
+  #伝言板用のルーティング
   get 'dengonban/index'
   get 'dengonban', to: 'dengonban#index'
 
   post 'dengonban/index'
   post 'dengonban', to: 'dengonban#index'
 
+  #サンプルのhelo用のルーティング
   get 'helo/index'
   get 'helo', to: 'helo#index'
 
