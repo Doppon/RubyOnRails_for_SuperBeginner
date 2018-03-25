@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post 'people/add', to: 'people#add'
 
   get 'people/edit/:id', to: 'people#edit'
+  patch 'people/edit/:id', to: 'people#update'
 
   get 'people/:id', to: 'people#show'
 
