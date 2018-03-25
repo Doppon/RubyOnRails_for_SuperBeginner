@@ -24,6 +24,8 @@ class PeopleController < ApplicationController
     @person = Person.find(params[:id])
   end
 
+  def update; end
+
   private
 
   def person_params
