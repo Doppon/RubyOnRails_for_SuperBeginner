@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'people/add'
   post 'people/add', to: 'people#add'
 
+  get 'people/edit/:id', to 'people#edit'
+
   get 'people/:id', to: 'people#show'
 
   get 'dengonban/index'
