@@ -1,2 +1,14 @@
 <h1>People#edit</h1>
 <p><%= @msg %></p>
+<table>
+  <%= form_for( @person, url:{ controller:'people', action:'edit' }) do |f| %> %>
+  <tr>
+    <th>id</th>
+    <td><%= f.text_field :name %></td>
+    <th>name</th>
+    <td><%= f.text_field :age %></td>
+    <th>edit</th>
+    <td><%= f.text_field :mail %></td>
+  </tr>
+  <% end %>
+</table>
