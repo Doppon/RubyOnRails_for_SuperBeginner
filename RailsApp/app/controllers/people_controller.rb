@@ -24,7 +24,11 @@ class PeopleController < ApplicationController
     @person = Person.find(params[:id])
   end
 
-  def update; end
+  def update
+    obj = Person.find(params[:id])
+    obj.update(person_params)
+    redirect_to '/people'
+  end
 
   private
 
