@@ -6,6 +6,7 @@
       <th>id</th>
       <th>name</th>
       <th>edit</th>
+      <th>delete</th>
     </tr>
     <% @data.each do |obj| %>
     <tr>
@@ -17,6 +18,9 @@
       </td>
       <td>
         <%= link_to  "編集", "/people/edit/#{obj.id}" %>
+      </td>
+      <td>
+        <%= link_to  "削除", "#" %>
       </td>
     </tr>
     <% end %>
