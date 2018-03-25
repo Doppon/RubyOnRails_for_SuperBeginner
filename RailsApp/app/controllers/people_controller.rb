@@ -30,6 +30,8 @@ class PeopleController < ApplicationController
     redirect_to '/people'
   end
 
+  def delete; end
+
   private
 
   def person_params
