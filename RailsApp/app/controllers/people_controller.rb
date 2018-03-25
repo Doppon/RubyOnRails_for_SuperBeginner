@@ -20,6 +20,7 @@ class PeopleController < ApplicationController
   end
 
   def edit
+    @msg = '(ΦωΦ)フフフ…editアクションだぜd(´・ω・｀)'
     @person = Person.find(params[:id])
   end
 
