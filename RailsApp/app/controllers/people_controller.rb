@@ -26,8 +26,10 @@ class PeopleController < ApplicationController
 
   def update
     obj = Person.find(params[:id])
-    obj.update(person_params)
-    redirect_to '/people'
+    if request.patch?
+      obj.update(person_params)
+      redirect_to '/people'
+    end
   end
 
   def delete
