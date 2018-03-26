@@ -17,6 +17,10 @@ class CardsController < ApplicationController
   end
 
   def edit
+    if request.patch?
+      Card.update(card_params)
+      redirect_to '/cards'
+    end
   end
 
   def delete
