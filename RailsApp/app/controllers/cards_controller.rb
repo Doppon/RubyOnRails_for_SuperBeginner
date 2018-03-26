@@ -10,6 +10,10 @@ class CardsController < ApplicationController
   end
 
   def add
+    if request.post?
+      Card.create(card_params)
+      redirect_to '/cards'
+    end
   end
 
   def edit
