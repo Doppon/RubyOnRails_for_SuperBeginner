@@ -18,4 +18,10 @@ class CardsController < ApplicationController
   def delete
   end
 
+  private
+
+  def card_params
+    params.require(:card).permit(:title, :auther, :price, :publisher, :memo)
+  end
+
 end
