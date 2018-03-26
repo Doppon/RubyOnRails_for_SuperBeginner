@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'cards/index'
+
+  get 'cards/show'
+
+  get 'cards/add'
+
+  get 'cards/edit'
+
   #CRUD機能が実装されたPeopleルーティング
   get 'people/index'
   get 'people', to: 'people#index'
