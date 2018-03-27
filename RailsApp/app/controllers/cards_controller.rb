@@ -17,11 +17,13 @@ class CardsController < ApplicationController
   def edit
     if request.patch?
       Card.update(card_params)
-      redirect_to '/cards'      
+      redirect_to '/cards'
     end
   end
 
   def delete
+    Card.find(params[:id]).destroy
+    redirect_to '/cards'
   end
 
   private
