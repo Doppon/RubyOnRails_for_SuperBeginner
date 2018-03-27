@@ -10,26 +10,30 @@ class CardsController < ApplicationController
   def add
     if request.post?
       Card.create(card_params)
-      redirect_to '/cards'
+      back_to_home
     end
   end
 
   def edit
     if request.patch?
       Card.update(card_params)
-      redirect_to '/cards'
+      back_to_home
     end
   end
 
   def delete
     Card.find(params[:id]).destroy
-    redirect_to '/cards'
+    back_to_home
   end
 
   private
 
   def card_params
     params.require(:card).permit(:title, :auther, :price, :publisher, :memo)
+  end
+
+  def back_to_home
+    redirect_to '/cards'
   end
 
 end
