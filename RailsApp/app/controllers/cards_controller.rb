@@ -1,6 +1,4 @@
 class CardsController < ApplicationController
-  layout 'cards'
-
   def index
     @cards = Card.all
   end
@@ -19,7 +17,7 @@ class CardsController < ApplicationController
   def edit
     if request.patch?
       Card.update(card_params)
-      redirect_to '/cards'
+      redirect_to '/cards'      
     end
   end
 
