@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  # messages用
   get 'messages/index'
+  get 'messages', to: 'messages#index'
 
   get 'messages/show'
 
