@@ -11,6 +11,8 @@ class CardsController < ApplicationController
     if request.post?
       Card.create(card_params)
       back_to_home
+    else
+      @card = Card.new
     end
   end
 
