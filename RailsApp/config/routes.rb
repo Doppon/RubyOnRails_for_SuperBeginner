@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   get 'messages', to: 'messages#index'
 
   get 'messages/add'
+  post 'messages/add', to: 'messages#create'
 
   get 'messages/edit'
-  
+
   get 'messages/:id', to: 'messages#show'
 
   # 読書カードアプリ用
