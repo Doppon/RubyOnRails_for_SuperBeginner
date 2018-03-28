@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'cards/index'
   get 'cards', to: 'cards#index'
 
-  get 'cards/show'
+  get 'cards/:id', to: 'cards#show'
 
   get 'cards/add'
   post 'cards/add'
