@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'messages/index'
+
+  get 'messages/show'
+
+  get 'messages/add'
+
+  get 'messages/edit'
+
   # 読書カードアプリ用
   get 'cards/index'
   get 'cards', to: 'cards#index'
