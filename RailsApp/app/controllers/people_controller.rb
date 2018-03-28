@@ -41,6 +41,11 @@ class PeopleController < ApplicationController
 
   def find
     @msg = 'please type search word ...'
+    @people = Array.new
+    if request.post?
+      obj = Person.find params['find']
+      @people.push obj
+    end
   end
 
   private
