@@ -35,6 +35,9 @@ class MessagesController < ApplicationController
   end
 
   def delete
+    obj = Message.find(params[:id])
+    obj.destroy
+    redirect_to 'messages/'
   end
 
   private
