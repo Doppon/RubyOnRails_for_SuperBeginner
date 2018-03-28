@@ -15,7 +15,7 @@ URL：http://www.shuwasystem.co.jp/products/7980html/4832.html
 |
 |- memo：気になった事や知らなかった事のメモ
 |
- - (README：このファイルｗ)
+ - (README：このファイル)
 ```
 
 ### 注意事項
