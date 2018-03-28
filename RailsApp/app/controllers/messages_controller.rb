@@ -29,6 +29,9 @@ class MessagesController < ApplicationController
   end
 
   def update
+    obj = Message.find(params[:id])
+    obj.update(message_params)
+    redirect_to 'messages/'
   end
 
   def delete
