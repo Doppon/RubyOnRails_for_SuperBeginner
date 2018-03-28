@@ -44,7 +44,7 @@ class PeopleController < ApplicationController
     @people = []
     if request.post?
       f = params[:find].split(',')
-        @people = Person.where "age >= ? and age <= ?", f[0], f[1]
+        @people = Person.find(f)
     end
   end
 
