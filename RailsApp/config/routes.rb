@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'cards/index'
+  get 'cards', to: 'cards#index'
 
   get 'cards/show'
 
