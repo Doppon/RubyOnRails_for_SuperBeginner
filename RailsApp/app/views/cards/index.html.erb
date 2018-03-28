@@ -8,11 +8,13 @@
     <th>編集</th>
     <th>削除</th>
   </tr>
+  <% @cards.each do |obj| %>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td><%= obj.id %></td>
+    <td><%= obj.title %></td>
+    <td><%= obj.author %></td>
+    <td>編集</td>
+    <td>削除</td>
   </tr>
+  <% end %>
 </table>
