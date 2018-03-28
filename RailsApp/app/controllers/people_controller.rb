@@ -39,6 +39,10 @@ class PeopleController < ApplicationController
     redirect_to '/people'
   end
 
+  def find
+    @msg = 'please type search word ...'
+  end
+
   private
 
   def person_params
