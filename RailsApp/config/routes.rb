@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  #読書カードアプリ用
+  # 読書カードアプリ用
   get 'cards/index'
   get 'cards', to: 'cards#index'
 
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get 'cards/delete/:id', to: 'cards#delete'
 
-  #CRUD機能が実装されたPeople用
+  # CRUD機能が実装されたPeople用
   get 'people/index'
   get 'people', to: 'people#index'
 
@@ -27,14 +27,14 @@ Rails.application.routes.draw do
 
   get 'people/:id', to: 'people#show'
 
-  #伝言板用
+  # 伝言板用
   get 'dengonban/index'
   get 'dengonban', to: 'dengonban#index'
 
   post 'dengonban/index'
   post 'dengonban', to: 'dengonban#index'
 
-  #サンプルのhelo用
+  # サンプルのhelo用
   get 'helo/index'
   get 'helo', to: 'helo#index'
 
