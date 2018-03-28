@@ -18,3 +18,6 @@ Rails.application.config.assets.precompile += %w( cards.js cards.css )
 
 # people用の設定
 Rails.application.config.assets.precompile += %w( people.js people.css )
+
+# messages用の設定
+Rails.application.config.assets.precompile += %w( messages.js messages.css )
