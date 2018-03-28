@@ -17,6 +17,7 @@ class CardsController < ApplicationController
   end
 
   def edit
+    @card = Card.find(params[:id])
     if request.patch?
       Card.update(card_params)
       back_to_home
