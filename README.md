@@ -9,7 +9,7 @@ URL：http://www.shuwasystem.co.jp/products/7980html/4832.html
 
 ## 構成
 ```
-|- RailsApp：第一章~〇〇まで(進めてるなう)
+|- RailsApp：第一章~最終章(第六章)まで
 |
 |- Addendum：Rubyの基本的な使い方
 |
