@@ -13,14 +13,16 @@ class PeopleController < ApplicationController
 
   def add
     @msg = '(ΦωΦ)フフフ…addアクションだぜd(´・ω・｀)'
+    @person = Person.new
+  end
+
+  def create
     @person = Person.new(person_params)
-    if request.post?
-      if @person.save
-        redirect_to '/people'
-      else
-        @msg = '入力に問題あり(　ﾟдﾟ)ﾝﾏｯ!!'
-        render 'add'
-      end
+    if @person.save
+      redirect_to '/people'
+    else
+      @msg = '入力に問題あり(　ﾟдﾟ)ﾝﾏｯ!!'
+      render 'add'
     end
   end
 
