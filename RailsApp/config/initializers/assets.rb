@@ -13,4 +13,8 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
+# 読書カードアプリ用の設定
 Rails.application.config.assets.precompile += %w( cards.js cards.css )
+
+# people用の設定
+Rails.application.config.assets.precompile += %w( people.js people.css )
