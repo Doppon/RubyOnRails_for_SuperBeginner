@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'cards/edit/:id', to: 'cards#edit'
   patch 'cards/edit/:id', to: 'cards#edit'
 
+  get 'cards/delete/:id', to: 'cards#delete'
+
   #CRUD機能が実装されたPeopleルーティング
   get 'people/index'
   get 'people', to: 'people#index'
