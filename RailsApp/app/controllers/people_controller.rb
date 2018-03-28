@@ -43,8 +43,12 @@ class PeopleController < ApplicationController
     @msg = 'please type search word ...'
     @people = []
     if request.post?
-      obj = Person.find(params[:find])
-      @people.push(obj)
+      if (params[:find] =~ /^[0-9]+$/).nil?
+        @people = Person.where name: params[:find]
+      else
+        obj = Person.find(params[:find])
+        @people.push(obj)
+      end
     end
   end
 
