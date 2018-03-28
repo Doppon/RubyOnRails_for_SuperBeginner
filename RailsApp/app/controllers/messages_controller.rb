@@ -26,4 +26,10 @@ class MessagesController < ApplicationController
   def delete
   end
 
+  private
+
+  def message_params
+    params.require(:message).permit(:person_id, :title, :message)
+  end
+
 end
