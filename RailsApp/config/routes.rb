@@ -25,6 +25,9 @@ Rails.application.routes.draw do
 
   get 'people/delete/:id', to: 'people#delete'
 
+  get 'people/find'
+  post 'people/find'
+
   get 'people/:id', to: 'people#show'
 
   # 伝言板用
