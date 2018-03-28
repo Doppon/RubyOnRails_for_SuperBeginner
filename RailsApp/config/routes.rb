@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   get 'messages/index'
   get 'messages', to: 'messages#index'
 
-  get 'messages/show'
-
   get 'messages/add'
 
   get 'messages/edit'
+  
+  get 'messages/:id', to: 'messages#show'
 
   # 読書カードアプリ用
   get 'cards/index'
