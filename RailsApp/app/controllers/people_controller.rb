@@ -44,7 +44,7 @@ class PeopleController < ApplicationController
     @people = []
     if request.post?
       f = params[:find].split(',')
-        @people = Person.find(f)
+        @people = Person.all.limit(f[0]).offset(f[1])
     end
   end
 
