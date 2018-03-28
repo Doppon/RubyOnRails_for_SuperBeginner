@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   post 'cards/add'
 
   get 'cards/:id', to: 'cards#show'
-  
+
   get 'cards/edit/:id', to: 'cards#edit'
   patch 'cards/edit/:id', to: 'cards#edit'
 
