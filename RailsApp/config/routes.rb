@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get 'cards/add'
   post 'cards/add'
 
-  get 'cards/edit'
+  get 'cards/edit/:id', to: 'cards#edit'
+  patch 'cards/edit/:id', to: 'cards#edit'
 
   #CRUD機能が実装されたPeopleルーティング
   get 'people/index'
