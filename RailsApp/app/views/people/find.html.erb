@@ -19,11 +19,13 @@
     <td>Age</td>
     <td>Mail</td>
   </tr>
+  <% @people.each do |obj| %>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td><% obj.id %></td>
+    <td><% obj.name %></td>
+    <td><% obj.age %></td>
+    <td><% obj.mail %></td>
   </tr>
+  <% end %>
 </table>
 
