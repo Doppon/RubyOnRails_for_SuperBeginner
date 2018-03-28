@@ -1,8 +1,5 @@
 <h1>People#Find</h1>
 <p><%= @msg %></p>
-
-<h2>普通のID検索</h2>
-
 <table>
   <%= form_tag( controller: "people", action: "find" ) do |f| %>
   <tr>
@@ -22,39 +19,7 @@
     <td>Age</td>
     <td>Mail</td>
   </tr>
-  <% @people.each do |obj| %>
-  <tr>
-    <td><%= obj.id %></td>
-    <td><%= obj.name %></td>
-    <td><%= obj.age %></td>
-    <td><%= obj.mail %></td>
-  </tr>
-  <% end %>
-</table>
-<hr>
-
-<h2>WHEREを用いた検索</h2>
-
-<table>
-  <%= form_tag( controller: "people", action: "find" ) do |f| %>
-  <tr>
-    <th>FIND</th>
-    <td><%= text_field_tag "find" %></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td><%= submit_tag "Click" %></td>
-  </tr>
-  <% end %>
-</table>
-<table>
-  <tr>
-    <td>Id</td>
-    <td>Name</td>
-    <td>Age</td>
-    <td>Mail</td>
-  </tr>
-  <% @people.each do |obj| %>
+  <% @people_id.each do |obj| %>
   <tr>
     <td><%= obj.id %></td>
     <td><%= obj.name %></td>
