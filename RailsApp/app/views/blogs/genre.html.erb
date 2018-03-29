@@ -11,3 +11,12 @@
   </p>
    <hr>
 <% end %>
+<div class = "navigate">
+  <% if @page_num > 0 %>
+    <a href = "/blogs/genre/<%= @genre.id.to_s + '/' + (@page_num - 1).to_s %>">
+      <<前のページ
+    </a>
+  <% end %>
+  <span> </span>
+  <a href = "/blogs/genre/<%= @genre.id.to_s + '/' + (@page_num + 1).to_s %>">次のページ>></a>
+</div>
