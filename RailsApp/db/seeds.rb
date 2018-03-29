@@ -9,3 +9,6 @@
 Person.create(name: 'Taro', age:38, mail:'taro@taro.com')
 Person.create(name: 'poti', age:14, mail:'poti@poti.com')
 Person.create(name: 'tama', age:13, mail:'tama@tama.com')
+
+# 1つしか必要ないデータなのでseedとして用意する
+Blogconfig.create(id:1, title:'my blog', subtitle:'サンプルで作ったブログです。', stylename:'gray')
