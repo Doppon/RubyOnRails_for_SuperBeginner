@@ -1,4 +1,6 @@
 class MessagesController < ApplicationController
+  layout 'messages'
+
   def index
     @msg = 'Message data.'
     @data = Message.all
