@@ -1,4 +1,6 @@
 class BlogpostsController < ApplicationController
+  layout 'blogposts'
+
   def index
     @data = Blogpost.all.order('created_at desc')
   end
