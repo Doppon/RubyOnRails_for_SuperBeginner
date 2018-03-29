@@ -23,7 +23,7 @@
       <td>
       <% if @data.message != nil then %>
         <% @data.message.each do |obj| %>
-          <% '「' + obj.title + '」' %>
+          <%= '「' + obj.title + '」' %>
         <% end %>
       <% end %>
       </td>
