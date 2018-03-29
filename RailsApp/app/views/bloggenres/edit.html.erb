@@ -7,4 +7,20 @@
   <% end %>
 </ul>
 <% end %>
+<table>
+  <%= form_for( @bloggenre, url:{ controller: 'bloggenres', action: 'edit' } ) do |f| %>
+  <tr>
+    <th>Title</th>
+    <td><%= f.text_field :name %></td>
+  </tr>
+  <tr>
+    <th>Subtitle</th>
+    <td><%= f.text_field :memo %></td>
+  </tr>
+  <tr>
+    <th></th>
+    <td><%= f.submit "更新！" %></td>
+  </tr>
+  <% end %>
+</table>
 <p><a href = "/bloggenres"><<一覧ページ</a></p>
