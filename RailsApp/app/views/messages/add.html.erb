@@ -1,2 +1,22 @@
 <h1>Messages#add</h1>
 <p><%= @msg %></p>
+<table>
+  <%= form_tag( @message, url{controller:'messages', action:'create' } ) do |f| %>
+    <tr>
+      <th>Person ID</th>
+      <td><%= f.text_field :person_id %></td>
+    </tr>
+    <tr>
+      <th>Title</th>
+      <td><%= f.text_field :title %></td>
+    </tr>
+    <tr>
+      <th>Message</th>
+      <td><%= f.text_area :message %></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td><%= f.submit "追加！" %></td>
+    </tr>
+  <% end %>
+</table>
