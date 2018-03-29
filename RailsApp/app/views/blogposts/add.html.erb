@@ -1,2 +1,9 @@
 <h1>Blogposts#add</h1>
-<p>Find me in app/views/blogposts/add.html.erb</p>
+<p>ブログ記事の投稿画面</p>
+<% if @blogpost.errors.any? %>
+<ul>
+  <% @blogpost.errors.fullmessages.each do |err| %>
+    <li><%= err %></li>
+  <% end %>
+</ul>
+<% end %>
