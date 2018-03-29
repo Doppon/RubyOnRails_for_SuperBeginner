@@ -5,6 +5,7 @@
     <th>Id</th>
     <th>title</th>
     <th>person</th>
+    <th>person_age</th>
     <th colspan = "2"></th>
   </tr>
   <% @data.each do |obj| %>
@@ -12,6 +13,7 @@
     <td><%= obj.id %></td>
     <td><a href = "/messages/<%= obj.id %>"><%= obj.title %></a></td>
     <td><%= obj.person.name %></td>
+    <td><%= obj.person.age %></td>
     <td><a href = "/messages/edit/<%= obj.id %>">編集</a></td>
     <td><a href = "javascript:delData(<%= obj.id %>);">削除</a></td>
   </tr>
