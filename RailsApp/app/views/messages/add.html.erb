@@ -1,5 +1,12 @@
 <h1>Messages#add</h1>
 <p><%= @msg %></p>
+<% if @message.errors.any? %>
+<ul>
+  <% @message.errors.full_messages.each do |err|%>
+    <li><%= err %></li>
+  <% end %>
+</ul>
+<% end %>
 <table>
   <%= form_for( @message, url:{controller:'messages', action:'create' }) do |f| %>
     <tr>
