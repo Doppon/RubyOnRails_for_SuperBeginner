@@ -2,7 +2,7 @@
   <%= @blogpost.title %>
 </h3>
 <p class = "show_read">
-  <%= @blogpost.read + '[' + @blogpost.bloggenre.name +']' %>
+  <%= @blogpost.read + '[' + @blogpost.bloggenre.name + ']' %>
 </p>
 
 <% contents = @blogpost.content.split("\n") %>
