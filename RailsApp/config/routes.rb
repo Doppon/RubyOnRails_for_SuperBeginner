@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # ホーム画面用
   root to: 'home#index'
 
   # ブログ用
