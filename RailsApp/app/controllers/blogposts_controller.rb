@@ -28,7 +28,7 @@ class BlogpostsController < ApplicationController
     if request.post?
       @blogpost.destroy
       redirect_to '/blogposts'
-    end      
+    end
   end
 
   private
