@@ -1,4 +1,6 @@
 class BlogsController < ApplicationController
+  layout 'blogs'
+
   def index
     page_size = 5
     @page_num = 0
