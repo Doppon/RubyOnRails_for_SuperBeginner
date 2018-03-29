@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   get 'blogs/index'
+  get 'blogs', to: 'blogs#index'
+  get 'blogs/:page', to: 'blogs#index'
 
-  get 'blogs/genre'
+  get 'blogs/genre/:id', to: 'blogs#genre'
+  get 'blogs/genre/:id/:page', to: 'blogs#genre'
 
-  get 'blogs/show'
+  get 'blogs/show/:id', to: 'blogs#show'
 
   get 'blogposts/index'
   get 'blogposts', to: 'blogposts#index'
