@@ -14,10 +14,13 @@ Rails.application.routes.draw do
   post 'blogposts/delete/:id', to: 'blogposts#delete'
 
   get 'bloggenres/index'
+  get 'bloggenres', to: 'bloggenres#index'
 
   get 'bloggenres/add'
+  post 'bloggenres/add'
 
-  get 'bloggenres/edit'
+  get 'bloggenres/:id', to: 'bloggenres#edit'
+  patch 'bloggenres/:id', to: 'bloggenres#edit'
 
   get 'blogconfigs/index'
 
