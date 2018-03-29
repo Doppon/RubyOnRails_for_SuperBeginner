@@ -1,8 +1,14 @@
 class BlogconfigsController < ApplicationController
   def index
+    @blogconfig = Blogconfig.find(1)
   end
 
   def edit
+    @blogconfig = Blogconfig.find(1)
+    if request.patch?
+      @blogconfig.update(blogconfig_params)
+      redirect_to '/blogconfigs'
+    end
   end
 
   private
