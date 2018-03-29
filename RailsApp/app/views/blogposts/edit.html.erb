@@ -7,4 +7,29 @@
   <% end %>
 </ul>
 <% end %>
+<table>
+  <%= form_for( @blogpost, url:{ controller: 'blogposts', action: 'add' } ) do |f| %>
+  <tr>
+    <th>Name</th>
+    <td><%= f.text_field :title %></td>
+  </tr>
+  <tr>
+    <th>Memo</th>
+    <td><%= f.text_field :read %></td>
+  </tr>
+  <tr>
+    <th>Message</th>
+    <td><%= f.text_area :content, { cols:40, rows:10 } %></td>
+  </tr>
+  <tr>
+    <th>Genre ID</th>
+    <td><%= f.text_field :bloggenre_id %></td>
+  </tr>
+  <tr>
+    <th></th>
+    <td><%= f.submit "更新！" %></td>
+  </tr>
+  <% end %>
+</table>
+<hr>
 <p><a href = "/blogposts"><<一覧ページ</a></p>
