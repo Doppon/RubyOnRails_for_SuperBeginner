@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
-      redirect_to 'messages/'
+      redirect_to '/messages'
     else
       render 'add'
     end
@@ -31,7 +31,7 @@ class MessagesController < ApplicationController
   def update
     obj = Message.find(params[:id])
     obj.update(message_params)
-    redirect_to 'messages/'
+    redirect_to '/messages'
   end
 
   def delete
