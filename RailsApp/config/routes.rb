@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'home#index'
+
   # ブログ用
   get 'blogs/index'
   get 'blogs', to: 'blogs#index'
