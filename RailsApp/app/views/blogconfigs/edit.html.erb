@@ -1,3 +1,10 @@
 <h1>Blogconfigs#edit</h1>
 <p>ブログの編集画面</p>
+<% if @blogconfig.errors.any? %>
+<ul>
+  <% @blogconfig.errors.fullmessages.each do |err| %>
+    <li><%= err %></li>
+  <% end %>
+</ul>
+<% end %>
 <p><a href = "/blogconfigs"><<設定内容</a></p>
