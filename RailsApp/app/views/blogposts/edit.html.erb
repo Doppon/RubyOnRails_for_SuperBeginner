@@ -32,4 +32,17 @@
   <% end %>
 </table>
 <hr>
+<p>ジャンルの一覧</p>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Genre</th>
+  </tr>
+  <% @genres.each do |obj| %>
+  <tr>
+    <th><% obj.id %></th>
+    <th><% obj.name %></th>
+  </tr>
+  <% end %>
+</table>
 <p><a href = "/blogposts"><<一覧ページ</a></p>
