@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
   get 'blogposts/index'
+  get 'blogposts', to: 'blogposts#index'
 
   get 'blogposts/add'
+  post 'blogposts/add'
 
-  get 'blogposts/edit'
+  get 'blogposts/:id', to: 'blogposts#edit'
+  patch 'blogposts/:id', to: 'blogposts#edit'
 
   get 'blogposts/delete'
+  get 'blogposts/delete/:id', to: 'blogposts#delete'
+  post 'blogposts/delete/', to: 'blogposts#delete'
+  post 'blogposts/delete/:id', to: 'blogposts#delete'
 
   get 'bloggenres/index'
 
