@@ -3,19 +3,19 @@
 <table>
   <tr>
     <th>Id</th>
-    <td><%= @blogconfig.id %></td>
+    <td><%= @blogpost.id %></td>
   </tr>
   <tr>
     <th>Title</th>
-    <td><%= @blogconfig.title %></td>
+    <td><%= @blogpost.title %></td>
   </tr>
   <tr>
     <th>Read</th>
-    <td><%= @blogconfig.read %></td>
+    <td><%= @blogpost.read %></td>
   </tr>
   <tr>
     <th>Content</th>
-    <td><%= @blogconfig.content %></td>
+    <td><%= @blogpost.content %></td>
   </tr>
 </table>
 <%= form_tag( controller: "blogposts", action: "delete" ) do %>
