@@ -7,4 +7,24 @@
   <% end %>
 </ul>
 <% end %>
+<table>
+  <%= form_for( @blogconfig, url:{ controller: 'blogconfigs', action: 'edit' } ) do |f| %>
+  <tr>
+    <th>Title</th>
+    <td><%= f.text_field :title %></td>
+  </tr>
+  <tr>
+    <th>Subtitle</th>
+    <td><%= f.text_field :subtitle %></td>
+  </tr>
+  <tr>
+    <th>Style Name</th>
+    <td><%= f.text_field :stylename %></td>
+  </tr>
+  <tr>
+    <th></th>
+    <td><%= f.submit "更新！" %></td>
+  </tr>
+  <% end %>
+</table>
 <p><a href = "/blogconfigs"><<設定内容</a></p>
