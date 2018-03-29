@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # ブログ用
   get 'blogs/index'
   get 'blogs', to: 'blogs#index'
   get 'blogs/:page', to: 'blogs#index'
