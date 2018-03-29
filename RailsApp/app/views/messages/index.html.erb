@@ -13,7 +13,16 @@
     <td><a href = "/messages/show/<%= obj.id %>"><%= obj.title %></a></td>
     <td><%= obj.person %></td>
     <td><a href = "/messages/edit/<%= obj.id %>">編集</a></td>
-    <td><a href = "/messages/delete/<%= obj.id %>">削除</a></td>
+    <td><a href = "javascript:delData(<%= obj.id %>);">削除</a></td>
   </tr>
   <% end %>
 </table>
+<script>
+function delData(num) {
+    if (confirm('このデータを削除しますか？')){
+        document.location = "/messages/delete/" + num;
+    }
+    return false;
+}
+</script>
+
