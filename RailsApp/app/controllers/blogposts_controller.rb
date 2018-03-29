@@ -1,5 +1,6 @@
 class BlogpostsController < ApplicationController
   def index
+    @data = Blogpost.all.order('created_at desc')
   end
 
   def add
