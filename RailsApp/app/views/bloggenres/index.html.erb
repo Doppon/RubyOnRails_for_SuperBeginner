@@ -7,11 +7,13 @@
     <th>Memo</th>
     <th></th>
   </tr>
+  <% @data.each do |obj| %>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td><%= obj.id %></td>
+    <td><%= obj.name %></td>
+    <td><%= obj.memo %></td>
+    <td><a href = "/bloggenres/<%= obj.id %>">Edit</a></td>
   </tr>
+  <% end %>
 </table>
 <p><a href = "/bloggenres/add">新規作成>></a></p>
