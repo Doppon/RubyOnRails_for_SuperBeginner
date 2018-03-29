@@ -23,8 +23,10 @@ Rails.application.routes.draw do
   patch 'bloggenres/:id', to: 'bloggenres#edit'
 
   get 'blogconfigs/index'
+  get 'blogconfigs', to: 'blogconfigs#index'
 
   get 'blogconfigs/edit'
+  patch 'blogconfigs/edit'
 
   # messages用
   get 'messages/index'
