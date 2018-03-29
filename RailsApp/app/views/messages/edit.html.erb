@@ -1,7 +1,5 @@
 <h1>Messages#edit</h1>
 <p><%= @msg %></p>
-<h1>Messages#add</h1>
-<p><%= @msg %></p>
 <% if @message.errors.any? %>
 <ul>
   <% @message.errors.full_messages.each do |err|%>
@@ -9,4 +7,23 @@
   <% end %>
 </ul>
 <% end %>
-
+<table>
+  <%= form_for( @message, url:{controller:'messages', action:'update' }) do |f| %>
+    <tr>
+      <th>Person ID</th>
+      <td><%= f.text_field :person_id %></td>
+    </tr>
+    <tr>
+      <th>Title</th>
+      <td><%= f.text_field :title %></td>
+    </tr>
+    <tr>
+      <th>Message</th>
+      <td><%= f.text_area :message %></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td><%= f.submit "更新！" %></td>
+    </tr>
+  <% end %>
+</table>
