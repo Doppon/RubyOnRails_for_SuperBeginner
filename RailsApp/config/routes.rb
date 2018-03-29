@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'blogconfigs/index'
+
+  get 'blogconfigs/edit'
+
   # messages用
   get 'messages/index'
   get 'messages', to: 'messages#index'
