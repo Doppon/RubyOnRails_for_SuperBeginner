@@ -21,3 +21,7 @@ Rails.application.config.assets.precompile += %w( people.js people.css )
 
 # messages用の設定
 Rails.application.config.assets.precompile += %w( messages.js messages.css )
+
+Rails.application.config.assets.precompile += %w( blogconfigs.js blogconfigs.css )
+Rails.application.config.assets.precompile += %w( bloggenres.js bloggenres.css )
+Rails.application.config.assets.precompile += %w( blogposts.js blogposts.css )
