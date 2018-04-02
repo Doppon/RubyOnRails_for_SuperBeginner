@@ -125,3 +125,20 @@ personモデルを追加するとデータのymlファイルは複数形が入�
 
 
 # 第五章
+
+## resourcesの書き換え
+「resources :users」をベタ書きすると
+
+get '/users', to: 'users#index'
+get '/users/:id', to: 'users#show'
+
+get '/users/new', to: 'users#new'
+post '/users', to: 'users#create'
+
+get '/users/:id/edit', to: 'users#edit'
+patch '/users/:id', to: 'users#edit'
+put '/users/:id', to: 'users#update'
+
+delete '/users/:id', to: 'users#destroy'
+
+こうなる↑
