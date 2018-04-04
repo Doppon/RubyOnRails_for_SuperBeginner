@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
+  # 掲示板用
   resources :answers
   resources :questions
   resources :mycontacts
-  # ホーム画面用
-  root to: 'home#index'
 
   # ブログ用
   get 'blogs/index'
@@ -102,5 +101,8 @@ Rails.application.routes.draw do
 
   post 'helo/index'
   post 'helo', to: 'helo#index'
+
+  # ホーム画面用
+  root to: 'home#index'
 
 end
