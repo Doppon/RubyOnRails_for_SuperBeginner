@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @question.title %>
-</p>
+<h1>質問と回答</h1>
 
-<p>
-  <strong>Content:</strong>
-  <%= @question.content %>
-</p>
+<div class="question">
+  <h2 class="title">
+    <%= @question.title %>
+  </h2>
 
-<p>
-  <strong>Name:</strong>
-  <%= @question.name %>
-</p>
+  <p class="content">
+    <%= @question.content %>
+  </p>
 
-<p>
-  <strong>Finished:</strong>
-  <%= @question.finished %>
-</p>
+  <p class="q_name">
+    <%= @question.name %>
+  </p>
+
+  <span class="<%= @question.finished ? 'finished' : 'not_finished'%>">
+    <%= @question.finished ? '終了' : '受付中' %>
+  </span>
+</div>
 
 <%= link_to 'Edit', edit_question_path(@question) %> |
 <%= link_to 'Back', questions_path %>
