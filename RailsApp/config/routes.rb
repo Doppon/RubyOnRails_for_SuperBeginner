@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  # 掲示板用
+  # Q/Aサイト用
   resources :answers
   resources :questions
+
+  # scaffoldの練習用
   resources :mycontacts
 
   # ブログ用
