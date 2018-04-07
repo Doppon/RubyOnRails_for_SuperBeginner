@@ -21,6 +21,7 @@ class QuestionsController < ApplicationController
 
   # GET /questions/1/edit
   def edit
+    redirect_to '/questions'
   end
 
   # POST /questions
