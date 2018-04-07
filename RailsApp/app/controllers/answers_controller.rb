@@ -26,9 +26,10 @@ class AnswersController < ApplicationController
   # POST /answers
   # POST /answers.json
   def create
+    end_counter = 10 # 質問受付を終了にする回数
     @answer = Answer.new(answer_params)
 
-    respond_to do |format|
+    respond_to do |format| #終了する処理を追加
       if @answer.save
         format.html { redirect_to @answer, notice: 'Answer was successfully created.' }
         format.json { render :show, status: :created, location: @answer }
