@@ -31,6 +31,12 @@
 
 <% if @question.answer.count == 0 %>
   <p class="answer">※まだありません</p>
+<% else %>
+  <% @question.answer.reverse_each do |re| %>
+    <p class="answer">
+      <%= re.content + '(' + re.name + ')' %>
+    </p>
+  <% end %>
 <% end %>
 
 <%= link_to 'Edit', edit_question_path(@question) %> |
