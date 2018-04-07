@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :questionary_items
   resources :questionaries
   # Q/Aサイト用
   resources :answers
