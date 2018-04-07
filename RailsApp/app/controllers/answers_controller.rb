@@ -29,13 +29,27 @@ class AnswersController < ApplicationController
     end_counter = 10 # 質問受付を終了にする回数
     @answer = Answer.new(answer_params)
 
-    respond_to do |format| #終了する処理を追加
+    respond_to do |format|
       if @answer.save
-        format.html { redirect_to @answer, notice: 'Answer was successfully created.' }
-        format.json { render :show, status: :created, location: @answer }
+        num = Answer.where('question_id = ?',@answer.question_id).count
+        if num >= end_counter
+          q = Question.find @answer.question_id
+          q.finished = true
+          q.save
+        end
+        format.html {
+          redirect_to '/questions/' + @answer.question_id.to_s 
+        }
+        format.json {
+          render :show, status: :created, location: @answer
+        }
       else
-        format.html { render :new }
-        format.json { render json: @answer.errors, status: :unprocessable_entity }
+        format.html {
+          render :new
+        }
+        format.json {
+          render json: @answer.errors, status: :unprocessable_entity
+        }
       end
     end
   end
