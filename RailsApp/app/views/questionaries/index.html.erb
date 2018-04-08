@@ -12,14 +12,21 @@
   </thead>
 
   <tbody>
+    <% dx = 60 * 60 * 9 %> <!-- TODO: 日本時刻に設定をいじる -->
     <% @questionaries.each do |questionary| %>
       <tr>
         <td><%= questionary.title %></td>
-        <td><%= questionary.description %></td>
-        <td><%= questionary.deadline %></td>
-        <td><%= link_to 'Show', questionary %></td>
-        <td><%= link_to 'Edit', edit_questionary_path(questionary) %></td>
-        <td><%= link_to 'Destroy', questionary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+        <%= 'あと約'+ ((questionary.deadline - Datetime.now - dx) / (60 * 60 *24).to_i.to_s + '日') %>
+        <% if questionary.deadline - dx > Datetime.now %>
+          <span class="not_finished">受付中</span>
+          </td>
+          <td><%= link_to 'アンケートを表示', questionary %></td>
+        <% else %>
+          <span class="finished">受付終了</span>
+          </td>
+          <td></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
