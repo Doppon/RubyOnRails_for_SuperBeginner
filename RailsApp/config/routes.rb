@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  # アンケートサイト用
   resources :questionary_results
   resources :questionary_choices
   resources :questionary_items
   resources :questionaries
+
   # Q/Aサイト用
   resources :answers
   resources :questions
