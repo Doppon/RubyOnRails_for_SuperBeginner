@@ -1,19 +1,14 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @questionary.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
+<h1 class="title"><%= @questionary.title %></h1>
+<div class="questionary">
+<p class="description">
   <%= @questionary.description %>
 </p>
 
-<p>
-  <strong>Deadline:</strong>
+<p class="deadline">
+  <strong>締め切り：</strong>
   <%= @questionary.deadline %>
 </p>
-
+</div>
 <%= link_to 'Edit', edit_questionary_path(@questionary) %> |
 <%= link_to 'Back', questionaries_path %>
