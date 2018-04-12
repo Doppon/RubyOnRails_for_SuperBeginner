@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :questionary_items
   resources :questionaries
 
+  get 'questionary_choices/new/:id', to: 'questionary_choices#new'
+  get 'questionary_items/new/:id', to: 'questionary_items#new'
+
   # Q/Aサイト用
   resources :answers
   resources :questions
