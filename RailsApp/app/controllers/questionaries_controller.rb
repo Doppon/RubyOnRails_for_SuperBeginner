@@ -22,6 +22,11 @@ class QuestionariesController < ApplicationController
       else
         result += ',' + ':' + params[str]
       end
+      obj = QuestionaryResult.new
+      obj.questionary_id = id
+      obj.result = result
+      obj.save!
+      redirect_to '/questionaries'
     end
   end
 
